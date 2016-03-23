@@ -1,0 +1,51 @@
+Python 3.1.1 (r311:74483, Aug 17 2009, 17:02:12) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> ================================ RESTART ================================
+>>> 
+Round 1:
+ HAL picks rock.
+ WOPR picks paper.
+ WORP wins.
+Round 2:
+ HAL picks scissors.
+ WOPR picks rock.
+ WORP wins.
+Round 3:
+ HAL picks scissors.
+ WOPR picks scissors.
+ It's a tie.
+Round 4:
+ HAL picks scissors.
+ WOPR picks paper.
+ HAL wins.
+Round 5:
+ HAL picks rock.
+ WOPR picks scissors.
+ HAL wins.
+Round 6:
+ HAL picks paper.
+ WOPR picks scissors.
+ WORP wins.
+Round 7:
+ HAL picks rock.
+ WOPR picks paper.
+ WORP wins.
+Round 8:
+ HAL picks scissors.
+ WOPR picks scissors.
+ It's a tie.
+Round 9:
+ HAL picks paper.
+ WOPR picks scissors.
+ WORP wins.
+Round 10:
+ HAL picks scissors.
+ WOPR picks paper.
+ HAL wins.
+Final Score:
+ HAL won 3
+ WOPR won 5
+ WOPR wins.
+
+
+Press enter key to exit.

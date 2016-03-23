@@ -1,0 +1,21 @@
+CS 161 Homework 6 
+Extra Credit: Not Required! (see note at bottom)
+Bart Massey 
+2011-11-22
+
+It would be good to put a GUI interface on your fishing game from HW3. We'll use the tkinter module as described in Chapter 10 of the textbook.
+
+The GUI should replace the command-line interface of the fishing program, allowing the same basic activities that HW 3 provided for, with the exception of help, scores and test. That is, your GUI program should provide a way to register new users, a way to fish as a registered user, and a way to cast.
+
+You may provide pictures, but you needn't do so: Just making the GUI text game work is sufficient.
+
+Here's a screenshot from my GUI.
+
+gfishing GUI screenshot
+Your GUI may look quite different.
+
+This assignment is extra credit. It may be used, at the instructor's discretion, to replace a missing or poor-quality homework. It will have no effect on exam scores. It might also be that you just want to do it for fun.
+
+Submit your source code as gfishing.py. Also write a brief report on how it went, and include a screenshot of your GUI. As always you can submit either with multiple file uploads or with the upload of a ZIP file containing your work. No Word or other non-standard document formats, please: text (preferred), PDF or similar is fine.
+
+

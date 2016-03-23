@@ -1,0 +1,142 @@
+CS 161 Homework 2 
+
+Bart Massey and Disha Gandhi 
+
+2011-10-11
+
+Here's some problems to test your understanding and
+creativity.
+
+All problems require computer programs: please place
+each of these programs in a file with the name given in
+square brackets.
+
+Submit the assignment to the Moodle as a main text answering
+any questions, and attach files containing the programs to
+the assignment. You may submit the main text either as notes
+or as a separate attachement. If you submit it as an
+attachment, please send either a textfile, HTML or PDF: No
+office document formats please, as they are sometimes hard
+for us to open and read correctly.
+
+Computer Guess [guess.py]: Do Challenge Problem 4, p. 85
+of the text. However, instead of having the human choose
+a number between 1 and 100, have them choose a number
+between 1 and 10. Don't worry too much about having the
+computer guess well, as long as it works right for any
+number between 1 and 10. Here's a sample run from my
+program:
+
+    Think of a number between 1 and 10, but don't tell me what it is.
+
+    Then hit enter.
+
+
+
+
+
+ 
+Is it 5? [y/n]n
+
+Is your number higher or lower than 5? [h/l]l
+
+Is it 4? [y/n]n
+
+Is your number higher or lower than 4? [h/l]l
+
+Is it 3? [y/n]y
+
+I win!
+
+ 
+Collatz Hailstones [collatz.py]: Consider the following
+process:
+
+    Start with some positive number n
+
+    If n is 1, stop
+
+    If n is odd, replace n with 3 * n + 1
+
+    Otherwise (n is even), divide n by 2
+
+ 
+If you repeat this process a large number of times, you
+will get a sequence of numbers. For example, if you
+start with n = 3:
+
+    3 is odd, so replace it with 3 * 3 + 1 = 10
+
+    10 is even, so divide it by 2 to get 5
+
+    5 is odd, so replace it with 16
+
+    16 is even, so divide it by 2 to get 8
+
+    8 is even, so divide it by 2 to get 4
+
+    4 is even, so divide it by 2 to get 2
+
+    2 is even, so divide it by 2 to get 1
+
+    1 is 1, so stop
+
+ 
+This sequence 3, 10, 5, 16, 8, 4, 2, 1 is called a "hailstone sequence". The Collatz conjecture is that for any positive number n the hailstone sequence eventually hits 1 and stops.
+
+Write a program that inputs a starting number n and
+produces the hailstone sequence starting after that
+number and running until n reaches 1. So, for example,
+for n = 3 the program should print:
+
+    10
+
+    5
+
+    16
+
+    8
+
+    4
+
+    2
+
+    1
+
+ 
+[Hint: To test whether a number x is odd, you can use
+the expression (x & 1 == 1). Ask an advanced computer
+science student or a tutor why this works if you care.]
+
+Now modify your program to not print the sequence;
+instead just print the number of steps the program took
+to reach 1 (i.e., the length of the sequence). For
+example, for n = 3 the program should print 7.
+
+Now put a loop around the program to show the length of
+the hailstone sequence for the numbers 2..20 without any
+human input.
+
+Letter Reuse [reuse.py]: Write a program that inputs a
+sentence. For each letter in that sentence, it should
+count how many times that letter appears. It should then
+output the most-frequently-used letter in that sentence,
+together with its count. If there's a tie for
+most-frequently-used, it should choose the one closest
+to the beginning of the alphabet.
+
+[HINTS: The function ord() converts an ASCII character
+to its integer code. The function chr() converts an
+integer code to its ASCII character. The lowercase
+letters have consecutive codes: ord('a') == 97,
+ord('b') == 98, and so on up to ord('z') == 122.
+The easiest way to build your program is to use a
+dictionary.]
+
+Here's an example run of my program:
+
+    ? I found big bags of letter 'A's.
+
+    a 2
+
+ 

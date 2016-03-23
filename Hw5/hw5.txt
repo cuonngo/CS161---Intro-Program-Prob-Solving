@@ -1,0 +1,18 @@
+S 161 Homework 5 
+Bart Massey 
+2011-11-22
+
+Let's build a really simple GUI interface. We'll use the tkinter module as described in Chapter 10 of the textbook.
+
+We're going to build a GUI for the ancient game of "Coin Matching". In this game you pick heads or tails, and the computer flips a coin. If you guessed correctly, you get a point; otherwise the computer gets a point.
+
+Your GUI might look something like this:
+
+Picture of coin matching GUI
+You may provide graphics, but you needn't do so: Just making the GUI text game work is sufficient.
+
+Submit your source code as coinmatch.py. Also write a brief report on how it went. Please also submit a screenshot of your GUI in operation.
+
+As always you can submit either with multiple file uploads or with the upload of a ZIP file containing your work. No Word or other non-standard document formats, please: text (preferred), PDF or similar is fine.
+
+

@@ -1,0 +1,37 @@
+S 161 Fall 2011 Final Exam Take-Home (50 points)
+Bart Massey
+
+This is the take-home portion of your CS 161 Final Exam. It involves implementing a small program (perhaps 50 lines). Please allow yourself no more than four hours, in no more than two sessions, to tackle the project. Please do not discuss this work with anyone else before, during or after you complete it. This section of the exam is open book and open notes; you may use the Internet to refer to official Python documentation, but should otherwise not use it to help you complete the assignment.
+
+Imagine a turtle standing at the center of a large square fenced-in field. The turtle repeatedly:
+
+Turns to face in a random direction.
+Moves forward a random number of steps.
+This a form of ``random walk''. It is possible to show that if the turtle does this long enough, it will always eventually run into the fence.
+
+In this problem you are going to use turtle graphics to simulate this random walk several times.
+
+Your program should import turtle to get access to the turtle graphics package, as we have done in class. The program should start by drawing a black square with the left side at x = -100, right side at x = 100, bottom at y = -100 and top at y = 100.
+
+Next, your program should should place the turtle in the middle of the box and set the pen color to red. Finally, your program should draw the path of a wandering turtle by repeating the following two steps until the turtle leaves the box:
+
+Face the turtle in a random integer direction in the range 0 .. 359 degrees.
+Move the turtle forward a random integer distance between 1 and 100.
+You can tell when the turtle has left the box when the x coordinate of the turtle is less than -100 or greater than 100, or when the y coordinate is less than -100 or greater than 100.
+
+Once you have drawn a red turtle path, draw five more turtle paths using the same process: a green path, a blue path, a yellow path, a cyan path and a magenta path.
+
+The result should look something like this:
+
+wandering turtles
+Of course, you will remember to seed the random number generator before you start, so yours will look a little different than mine.
+
+A PDF copy of the turtle graphics documentation for Python 3.2.2 is available at http://svcs.cs.pdx.edu/moodle/file.php/9/python-3.2.2-docs-turtle.pdf in case you cannot access the official documentation site at http://docs.python.org/py3k/library/turtle.html.
+
+You may be particularly interested in the following turtle graphics functions documented there:
+
+turtle.color(<string>) takes a string color name and sets the drawing color to that color. For example, turtle.color("cyan") sets the drawing color to cyan.
+
+turtle.pos() returns a 2-tuple containing the current x and y coordinates of the turtle. For example, when the turtle is one unit to the right of the origin, turtle.pos() returns the tuple (1, 0).
+
+The turn-in for this is basically the same as for a homework assignment. Submit the program to the course Moodle as a file crawl.py, together with a screen shot showing the final state of a run.

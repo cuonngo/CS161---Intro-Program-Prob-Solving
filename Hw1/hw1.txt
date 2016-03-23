@@ -1,0 +1,109 @@
+CS 161 Homework 1 
+
+Bart Massey and Disha Gandhi 
+
+2011-09-30
+
+Here's some problems to test your understanding and
+creativity.
+
+Problems 2 through 4 require computer programs: please place
+each of these programs in a file with the name given in
+square brackets. For example, problem 2 should be saved in a
+file called "ctof.py".
+
+Submit the assignment to the Moodle as a main text answering
+all of the questions (problem 5 is optional) and attach
+files containing the programs to the assignment.
+
+For each of the following variable names, indicate
+whether the name is (a) a good name for a variable,
+(b) valid Python but a bad name for a variable, or
+(c) not a legal Python variable name. Explain each
+answer in a sentence or so.
+
+    1.1: _sport
+
+    1.2: Iplaygamesallthetime
+
+    1.3: 2_sports
+
+    1.4: sport
+
+    1.5: SPORT
+
+ 
+Celsius to Fahrenheit [ctof.py]:
+
+Write a program that inputs a temperature in degrees
+Celsius and prints that temperature in degrees
+Fahrenheit. If you don't know how to do the conversion,
+you can probably find out on the Internet. Credit your
+source.
+
+Echo EXTREME [echoextreme.py]:
+
+Write a program that inputs a string with the prompt
+"Yell something: ", and then outputs
+
+    S!!!1! s!".'..
+
+ 
+where "S" is the uppercase version of that string, and
+"s" is the lowercase version. For example:
+
+    Yell something: Hello
+
+    HELLO!!!1! hello!".'..
+
+ 
+Note that your text should be formatted exactly like
+the text here---that is, with the same punctuation and
+spacing.
+
+Midway Point [midway.py]:
+
+In Python you can find the length of a string (the
+number of characters in it) by using the len() 
+function. For example:
+
+    >>> len('hello')
+
+    5
+
+ 
+Write a program that inputs a string with no prompt, and
+then outputs a line with a single caret character ("^")
+pointing at the middle character of that string. (If the
+string is of even length, round up.) For example:
+
+    hello!
+
+       ^
+
+ 
+Optional Super Bonus Question:
+
+Try running each of the following programs. What happens?
+Explain why.
+
+a)
+
+    x' = 3
+
+    print('the variable x' has value ', x')
+
+ 
+b)
+
+    print = 7
+
+    print("the variable print has value ", print)
+
+ 
+c)
+
+    print('the variable print has value', print)
+
+ 
+

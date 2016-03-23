@@ -1,0 +1,34 @@
+S 161 Homework 4 
+Bart Massey 
+2011-11-12
+
+Let's extend the graph-drawing app we threw together in class to be something more generally useful and interesting. Your job is to use turtle graphics and file input to draw a roadmap from a description given to you in a map data file.
+
+The input file format is a series of lines of text. Each line consists of fields separated by commas.
+
+The first field is an item type field. The item type is a single character. The possible item types are:
+
+'c': The item is a city. The next fields are the x-coordinate, the y-coordinate, the name and the population. The x and y coordinates are numbers in the range -200 to 200. The name is a string of letters, digits spaces and underscores. Every city item will have a unique name. The population is an non-negative integer.
+
+If the city has a population of zero, it is just a point on the map: it need not be drawn. If it has a population in the range 1 to 90000 it is a town, and should be drawn as a small open circle with its name to its right. If it has more than 90000 it is a large city, and should be drawn as a larger filled circle with its name to its right.
+
+'r': The item is a road. The next fields are the names of the two endpoints of that road, which will have previously been given by 'c' commands. The road should be drawn as a solid line.
+
+You may read the map data file from stdin, or from a file whose name is given on the command line&emdash;whichever is easier for you.
+
+You can download a couple of sample map data files. The first is testmap.csv, a very simple demo map. The output of my program when given this map as input is
+
+test map rendering
+The second sample map data file is oregonmap.csv. I'll let you render that one for yourself.
+
+At the very least you'll need to import the Python 3 turtle graphics library module. Its documentation is here. This assignment will use much more of the library than we have in class, so study its documentation a bit. In particular you'll need the turtle.write() and turtle.circle() functions as well as the turtle.begin_fill() and turtle.end_fill() functions to complete the assignment. Depending on your platform, you may want to finish the program with a call to turtle.mainloop() to get it to wait for you to look at the output.
+
+You'll probably also want to import the Python 3 csv library module for reading files of comma-separated values. Its documentation is here. You could instead "roll your own", but this module is pretty easy to use and will take care of most of the heavy lifting for you. Don't forget to convert strings to numbers when you need to, though!
+
+You'll need to import the sys module if you want stdin. If you decide to go with reading arguments and then opening a file, you can either read the filename directly out of sys.argv or use something heavyweight like the argparse module. (I don't recommend the optparse or getopt modules, as the former is deprecated and the latter has a terrible programmer interface.)
+
+Watch out for IDLE! Trying to use standard input or command line arguments with it doesn't work very well. I'd suggest you start by developing your program such that it just calls open("myfile.csv") to get the file to read CSV from. When you are about done, you can convert your program to read from stdin or use a command line filename argument, and test it by running from the command line.
+
+You'll probably want a dictionary of cities keyed by name, which means that you'll want a City class to describe city information.
+
+Submit your source code as map.py and additionally submit any extra test maps you wrote. Also write a brief report on how it went. If you can figure out how to take a screenshot showing your Oregon map, that would be helpful, but it is definitely not required. As always you can submit either with multiple file uploads or with the upload of a ZIP file containing your work. No Word or other non-standard document formats, please: text (preferred), PDF or similar is fine.

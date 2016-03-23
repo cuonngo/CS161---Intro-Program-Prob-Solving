@@ -1,0 +1,96 @@
+CS 161 Homework 3 
+Bart Massey 
+2011-10-27
+
+It's time to write your first "interesting" game.
+
+This problem requires a computer program: please place the programs in a file with the name "fishing.py".
+
+Submit the assignment writeup to the Moodle as a main text, and attach the file containing the program to the assignment. You may submit the main text either as notes or as a separate attachement. If you submit it as an attachment, please send either a textfile, HTML or PDF: No office document formats please, as they are sometimes hard for us to open and read correctly.
+
+You're going to write a simple fishing game.
+
+When the user starts up the program, it reads commands from the user and then executes them.
+
+The available commands must include:
+
+        register <username>
+
+             Register a new user named <username>.
+
+             Usernames should include only letters,
+
+             numbers, and the characters '-' and '_'.
+
+        fish <username>
+
+            Starts fishing as user <username>
+
+        cast
+
+            The current user tries to catch a
+
+            fish, as detailed below.
+
+        scores
+
+            List the user's score, then
+
+            the scores of all registered users.
+
+        quit
+
+            Quit the program. The program should
+
+            run the "scores" command on the way out.
+
+        help
+
+            List the fishing commands and their effects.
+
+ 
+If the user "ends input" (input() raises an EOFError) then treat it as a quit command. If the user enters an empty command (blank line) ignore it. Otherwise, give an error for any input that is not a valid command, and allow the user to continue fishing.
+
+When the "cast" command is issued, the program decides what is caught and how it is scored based on the following table:
+
+Fish	Chance	Score
+Nothing	20%	0
+Minnow	20%	10
+Bluegill	30%	30
+Bass	15%	100
+Trout	10%	200
+Salmon	4%	500
+Gold Boot	1%	5000
+The program must respond to the cast command by showing what is caught, how much it is worth, and the user's current score.
+
+The program must save the scores on disk. Load and save the scores using "shelving" of scores keyed by username. Use a shelf with the filename "fishing". Make sure that the score shelf file is always current.
+
+Each command should be implemented as a separate function that is called from the main loop.
+
+Your writeup should include test cases that your program should pass. I included a testing command that casts 10000 times and reports the percentages of fish caught; this convinced me my catch algorithm was working.
+
+Some notes on the assignment:
+
+I've uploaded a sample run from my fishing program here.
+
+Your "cast" command should refuse to work if there is no current fisher.
+
+You can keep the score file up to date by using the sync() method of your shelf.
+
+You will probably want to keep information about the current fisher in global variables. If so, don't forget about the Python global declaration when working inside a function, or you will get confusing bugs.
+
+You can implement the logic of the "cast" command as a bunch of if statements. It would be better, though, to have a list of tuples (or even objects) representing the fishing table. Each element of the list would comprise a fish name, a fish percentage, and a fish score. To implement "cast" you'd need to generate a random number between 1 and 100 and then walk down the table looking for the corresponding entry. This requires a while loop that is only a little tricky to write.
+
+I used the string split() method to split the user's command into words for processing.
+
+You may want to implement the main loop by searching a dictionary of command descriptions as well. I just used a bunch of if statements in my first version, though.
+
+Don't be afraid to define helper functions beyond what the assignment requires.
+
+Things you might do once you've handed the assignment in:
+
+Add some other fish and adjust the probabilities. Be creative.
+
+Randomize the catch text to add interest. Make the catch text dependent on the type and score of the fish caught in interesting ways.
+
+Implement the achievement "Caught the Gold Boot", and any other achievements you can think of. I'll buy dinner (within reason) for anybody who can in my opinion beat the best achievement idea I have come up with---"'One Fish, Two Fish, Red Fish, Blue Fish': Caught a Salmon followed by two Bluegill"---and who then implements their clever achievement in their program. (OFTFRFBF is completed only 9% of the time after you have caught a Salmon, and catching a Salmon is only 4%, making this achievement pretty unlikely.)
